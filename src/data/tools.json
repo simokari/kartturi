@@ -1,0 +1,302 @@
+[
+  {
+    "id": "claude-code",
+    "name": "Claude Code",
+    "vendor": "Anthropic",
+    "type": "agentic CLI",
+    "purpose": "AI-avusteinen koodaus suoraan terminaalista tai IDE:stä — lukee, muokkaa ja ajaa koodia",
+    "phases": ["suunnittelu", "toteutus", "review", "testaus"],
+    "integrations": ["GitHub", "VS Code", "JetBrains", "Vercel"],
+    "worksWith": ["Claude Sonnet 4.6", "Claude Opus 4.7", "Claude Haiku 4.5"],
+    "strengths": [
+      "Koko koodipohjan konteksti käytössä",
+      "Ajaa komentoja, testit ja buildit suoraan",
+      "Subagentit rinnakkaiseen työhön",
+      "Ajastetut rutiinit (/schedule)"
+    ],
+    "limitations": [
+      "Vaatii Claude-tilaukseen (Pro/Max/API)",
+      "Windows-tuki toistaiseksi rajoitetumpi kuin Mac/Linux"
+    ],
+    "pricing": {
+      "subscription": [
+        { "tier": "Claude.ai Pro", "price": "$20/kk (sisältyy)" },
+        { "tier": "Claude.ai Max", "price": "$100/kk (sisältyy)" }
+      ]
+    },
+    "bestFor": [
+      "Koko projektin koodaus AI-avusteisesti",
+      "Bugien korjaus ja refaktorointi",
+      "Koodin selitys ei-ohjelmoijille"
+    ],
+    "links": {
+      "docs": "https://docs.anthropic.com/claude-code",
+      "home": "https://claude.ai/code"
+    },
+    "lastUpdated": "2026-05-22",
+    "source": "https://claude.ai/code",
+    "confidence": "verified"
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "vendor": "Anysphere",
+    "type": "IDE",
+    "purpose": "VS Code -pohjainen IDE jossa AI-koodausassistentti suoraan editorissa",
+    "phases": ["toteutus", "review"],
+    "integrations": ["GitHub", "VS Code (laajennukset)"],
+    "worksWith": ["GPT-4o", "Claude Sonnet 4.6", "Gemini 2.5 Pro"],
+    "strengths": [
+      "Tuttu VS Code -käyttöliittymä",
+      "Tab-täydennys koko tiedostokontekstilla",
+      "Composer: muokkaa useita tiedostoja kerralla"
+    ],
+    "limitations": [
+      "Erillinen sovellus (ei plugin olemassaolevaan VS Codeen)",
+      "Kalliimpi kuin Copilot"
+    ],
+    "pricing": {
+      "subscription": [
+        { "tier": "Hobby (ilmainen)", "price": "0 €" },
+        { "tier": "Pro", "price": "$20/kk" },
+        { "tier": "Business", "price": "$40/kk/käyttäjä" }
+      ]
+    },
+    "bestFor": [
+      "Päivittäinen koodaustyö IDE:ssä",
+      "Tiedostojen välinen refaktorointi",
+      "Nopea koodin generointi kontekstilla"
+    ],
+    "links": {
+      "docs": "https://docs.cursor.com",
+      "pricing": "https://cursor.com/pricing",
+      "home": "https://cursor.com"
+    },
+    "lastUpdated": "2026-05-22",
+    "source": "https://cursor.com",
+    "confidence": "verified"
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "vendor": "GitHub / Microsoft",
+    "type": "IDE-laajennus",
+    "purpose": "AI-koodausassistentti suoraan olemassaolevaan editoriin (VS Code, JetBrains, Vim…)",
+    "phases": ["toteutus", "review", "testaus"],
+    "integrations": ["GitHub", "VS Code", "JetBrains", "Vim/Neovim"],
+    "worksWith": ["GPT-4o", "Claude Sonnet 4.6", "Gemini 2.5 Pro"],
+    "strengths": [
+      "Toimii suoraan nykyisessä editorissa",
+      "Syvä GitHub-integraatio (PR-summary, issue-linkitys)",
+      "Edullinen verrattuna kilpailijoihin"
+    ],
+    "limitations": [
+      "Konteksti rajatumpi kuin Cursorilla tai Claude Codella",
+      "Vaatii GitHub-tilin"
+    ],
+    "pricing": {
+      "subscription": [
+        { "tier": "Individual", "price": "$10/kk" },
+        { "tier": "Business", "price": "$19/kk/käyttäjä" }
+      ],
+      "notes": "Ilmainen opiskelijoille ja open source -ylläpitäjille"
+    },
+    "bestFor": [
+      "Kehittäjä joka haluaa AI:n nykyiseen editoriin",
+      "Tiimit joilla on jo GitHub-lisenssi",
+      "Tab-täydennys päivittäisessä koodauksessa"
+    ],
+    "links": {
+      "docs": "https://docs.github.com/copilot",
+      "pricing": "https://github.com/features/copilot",
+      "home": "https://github.com/features/copilot"
+    },
+    "lastUpdated": "2026-05-22",
+    "source": "https://github.com/features/copilot",
+    "confidence": "verified"
+  },
+  {
+    "id": "ollama",
+    "name": "Ollama",
+    "vendor": "Ollama (avoin)",
+    "type": "lokaali runtime",
+    "purpose": "Ajaa avoimen lähdekoodin kielimalleja paikallisesti — ei datavuotoja, ei API-kuluja",
+    "phases": ["toteutus", "testaus"],
+    "integrations": ["VS Code", "Open WebUI", "LangChain"],
+    "worksWith": ["Llama 3.3", "Mistral", "Gemma", "Phi-4", "DeepSeek"],
+    "strengths": [
+      "Täysin ilmainen, data ei poistu koneelta",
+      "Yksinkertainen asennus (yksi binääri)",
+      "REST API — helppo integroida omiin sovelluksiin"
+    ],
+    "limitations": [
+      "Vaatii tehokkaan GPU:n isoille malleille",
+      "Paikallisten mallien laatu < frontier-mallien"
+    ],
+    "pricing": {
+      "subscription": [{ "tier": "Ilmainen", "price": "0 €" }]
+    },
+    "bestFor": [
+      "Yksityisyyttä vaativat projekti",
+      "Offline-kehitys",
+      "Kustannustehokas testaus ja iterointi"
+    ],
+    "links": {
+      "docs": "https://ollama.com/docs",
+      "home": "https://ollama.com"
+    },
+    "lastUpdated": "2026-05-22",
+    "source": "https://ollama.com",
+    "confidence": "verified"
+  },
+  {
+    "id": "github-actions",
+    "name": "GitHub Actions",
+    "vendor": "GitHub / Microsoft",
+    "type": "CI/CD",
+    "purpose": "Automaattiset työnkulut: testit, buildit ja deployaukset git-tapahtumien perusteella",
+    "phases": ["testaus", "julkaisu"],
+    "integrations": ["GitHub", "Vercel", "Docker", "npm"],
+    "worksWith": [],
+    "strengths": [
+      "Suoraan GitHub-repossa — ei erillisiä palvelimia",
+      "Ilmainen julkisille repaille ja kohtuullinen yksityisille",
+      "Laaja marketplace-toimintokirjasto"
+    ],
+    "limitations": [
+      "YAML-konfiguraatio voi monimutkaistua",
+      "Pienille projekteille saattaa olla ylilyönti"
+    ],
+    "pricing": {
+      "subscription": [
+        { "tier": "Free (julkiset repot)", "price": "0 €" },
+        { "tier": "Free (yksityiset, 2000 min/kk)", "price": "0 €" }
+      ]
+    },
+    "bestFor": [
+      "Automaattiset testit jokaiseen PR:ään",
+      "Tuotantoon vienti git pushin jälkeen",
+      "Monirepo-työnkulut"
+    ],
+    "links": {
+      "docs": "https://docs.github.com/actions",
+      "home": "https://github.com/features/actions"
+    },
+    "lastUpdated": "2026-05-22",
+    "source": "https://github.com/features/actions",
+    "confidence": "verified"
+  },
+  {
+    "id": "vercel",
+    "name": "Vercel",
+    "vendor": "Vercel",
+    "type": "hosting / deploy",
+    "purpose": "Frontend-sovellusten hosting ja automaattinen deploy — push GitHubiin, Vercel deployaa",
+    "phases": ["julkaisu", "seuranta"],
+    "integrations": ["GitHub", "GitHub Actions", "Next.js", "Vite"],
+    "worksWith": [],
+    "strengths": [
+      "Automaattinen deploy jokaisesta git-pushista",
+      "Preview-URL jokaiselle PR:lle",
+      "Globaali CDN — nopea kaikkialta",
+      "Helppo hallinta ilman devops-osaamista"
+    ],
+    "limitations": [
+      "Ilmaistaso rajattu (bandwidth, build-minuutit)",
+      "Serverless-funktiot — ei pitkäkestoisia prosesseja"
+    ],
+    "pricing": {
+      "subscription": [
+        { "tier": "Hobby (ilmainen)", "price": "0 €" },
+        { "tier": "Pro", "price": "$20/kk" }
+      ]
+    },
+    "bestFor": [
+      "React/Vite/Next.js-sovellusten julkaisu",
+      "Nopea prototyyppien jako",
+      "Automaattinen deploy ilman CI-konfiguraatiota"
+    ],
+    "links": {
+      "docs": "https://vercel.com/docs",
+      "pricing": "https://vercel.com/pricing",
+      "home": "https://vercel.com"
+    },
+    "lastUpdated": "2026-05-22",
+    "source": "https://vercel.com",
+    "confidence": "verified"
+  },
+  {
+    "id": "v0",
+    "name": "v0 by Vercel",
+    "vendor": "Vercel",
+    "type": "UI-generaattori",
+    "purpose": "Generoi React/Tailwind UI-komponentteja tekstikuvauksesta — nopea visuaalinen prototyyppaus",
+    "phases": ["suunnittelu", "toteutus"],
+    "integrations": ["Vercel", "GitHub", "Next.js"],
+    "worksWith": ["GPT-4o", "Claude Sonnet 4.6"],
+    "strengths": [
+      "Nopea UI-prototyyppaus ilman koodaustaitoja",
+      "Exportoi suoraan ajettavaa React-koodia",
+      "Iteroi visuaalisesti chatin kautta"
+    ],
+    "limitations": [
+      "Tuottaa usein Tailwind-koodia, ei aina projektin tyyliin sopivaa",
+      "Monimutkainen logiikka vaatii käsin hienosäätöä"
+    ],
+    "pricing": {
+      "subscription": [
+        { "tier": "Ilmainen (rajoitettu)", "price": "0 €" },
+        { "tier": "Premium", "price": "$20/kk" }
+      ]
+    },
+    "bestFor": [
+      "UI-komponenttien nopea luonnostelu",
+      "Ei-ohjelmoijien prototyyppaus",
+      "Ideoiden visuaalinen testaus"
+    ],
+    "links": {
+      "docs": "https://v0.dev/docs",
+      "home": "https://v0.dev"
+    },
+    "lastUpdated": "2026-05-22",
+    "source": "https://v0.dev",
+    "confidence": "verified"
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity AI",
+    "vendor": "Perplexity AI",
+    "type": "haku / tutkimus",
+    "purpose": "AI-pohjainen hakukone joka hakee reaaliaikaisesti webistä ja syntetisoi vastauksen lähdeviittein",
+    "phases": ["suunnittelu", "seuranta"],
+    "integrations": [],
+    "worksWith": ["GPT-4o", "Claude Sonnet 4.6", "Llama"],
+    "strengths": [
+      "Reaaliaikaiset web-haut — tieto ajan tasalla",
+      "Lähdeviitteet jokaiseen vastaukseen",
+      "Nopea teknisten kysymysten selvittelyyn"
+    ],
+    "limitations": [
+      "Ei koodin kirjoitukseen tai muokkaukseen",
+      "Pro-ominaisuudet maksullisia"
+    ],
+    "pricing": {
+      "subscription": [
+        { "tier": "Free", "price": "0 €" },
+        { "tier": "Pro", "price": "$20/kk" }
+      ]
+    },
+    "bestFor": [
+      "Teknologioiden ja kirjastojen vertailu",
+      "Uusimpien mallien ominaisuuksien selvitys",
+      "Hintojen ja julkaisupäivien tarkistus"
+    ],
+    "links": {
+      "docs": "https://docs.perplexity.ai",
+      "home": "https://perplexity.ai"
+    },
+    "lastUpdated": "2026-05-22",
+    "source": "https://perplexity.ai",
+    "confidence": "verified"
+  }
+]

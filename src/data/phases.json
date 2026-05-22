@@ -1,0 +1,32 @@
+[
+  {
+    "id": "suunnittelu",
+    "name": "Suunnittelu",
+    "description": "Ideointi, vaatimukset, arkkitehtuuri, promptien laadinta"
+  },
+  {
+    "id": "toteutus",
+    "name": "Toteutus",
+    "description": "Koodin kirjoitus AI-avusteisesti"
+  },
+  {
+    "id": "review",
+    "name": "Code Review",
+    "description": "Koodin laatu, tietoturva, auditointi"
+  },
+  {
+    "id": "testaus",
+    "name": "Testaus",
+    "description": "Yksikkö- ja integraatiotestit, manuaalinen testaus, CI"
+  },
+  {
+    "id": "julkaisu",
+    "name": "Julkaisu",
+    "description": "Deploy, CI/CD-putki, ympäristöjen hallinta"
+  },
+  {
+    "id": "seuranta",
+    "name": "Seuranta",
+    "description": "Tuotannon monitorointi, lokitus, ylläpito"
+  }
+]

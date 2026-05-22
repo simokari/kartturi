@@ -1,0 +1,230 @@
+[
+  {
+    "id": "claude-sonnet-4-6",
+    "name": "Claude Sonnet 4.6",
+    "vendor": "Anthropic",
+    "latestVersion": "claude-sonnet-4-6",
+    "releaseDate": "2025-07",
+    "category": "koodaus",
+    "phases": ["suunnittelu", "toteutus", "review", "testaus"],
+    "strengths": [
+      "Erinomainen koodin kirjoituksessa ja refaktoroinnissa",
+      "Pitkä konteksti-ikkuna (200k tokenia)",
+      "Hyvä suomenkielen ymmärrys",
+      "Vahva päättelykyky monimutkaisissa tehtävissä"
+    ],
+    "limitations": [
+      "Ei reaaliaikaista web-hakua ilman työkaluja",
+      "Tietopohja rajattu koulutusaineistoon (elokuu 2025)"
+    ],
+    "contextWindow": "200 000 tokenia",
+    "pricing": {
+      "subscription": [
+        { "tier": "Claude.ai Pro", "price": "$20/kk" },
+        { "tier": "Claude.ai Max", "price": "$100/kk" }
+      ],
+      "api": { "input": "$3/Mtok", "output": "$15/Mtok" }
+    },
+    "bestFor": [
+      "AI-avusteinen koodaus (Claude Code)",
+      "Pitkien dokumenttien analysointi",
+      "Arkkitehtuurisuunnittelu"
+    ],
+    "links": {
+      "docs": "https://docs.anthropic.com",
+      "pricing": "https://www.anthropic.com/pricing",
+      "home": "https://claude.ai"
+    },
+    "lastUpdated": "2026-05-22",
+    "source": "https://www.anthropic.com/claude",
+    "confidence": "verified"
+  },
+  {
+    "id": "claude-opus-4-7",
+    "name": "Claude Opus 4.7",
+    "vendor": "Anthropic",
+    "latestVersion": "claude-opus-4-7",
+    "releaseDate": "2025-07",
+    "category": "yleismalli",
+    "phases": ["suunnittelu", "toteutus", "review"],
+    "strengths": [
+      "Korkein päättelykyky Anthropicin malleista",
+      "Paras monimutkaisiin analyyttisiin tehtäviin",
+      "Extended Thinking -tuki syvään pohdintaan"
+    ],
+    "limitations": [
+      "Kalliimpi kuin Sonnet API-käytössä",
+      "Hitaampi vasteaika"
+    ],
+    "contextWindow": "200 000 tokenia",
+    "pricing": {
+      "subscription": [
+        { "tier": "Claude.ai Max", "price": "$100/kk (sisältyy)" }
+      ],
+      "api": { "input": "$15/Mtok", "output": "$75/Mtok" }
+    },
+    "bestFor": [
+      "Arkkitehtuurisuunnittelu ja ADR",
+      "Monimutkaiset analyysit",
+      "Kriittiset code reviewit"
+    ],
+    "links": {
+      "docs": "https://docs.anthropic.com",
+      "pricing": "https://www.anthropic.com/pricing",
+      "home": "https://claude.ai"
+    },
+    "lastUpdated": "2026-05-22",
+    "source": "https://www.anthropic.com/claude",
+    "confidence": "verified"
+  },
+  {
+    "id": "gpt-4o",
+    "name": "GPT-4o",
+    "vendor": "OpenAI",
+    "latestVersion": "gpt-4o",
+    "releaseDate": "2024-05",
+    "category": "yleismalli",
+    "phases": ["suunnittelu", "toteutus", "review", "testaus"],
+    "strengths": [
+      "Multimodaalinen (teksti, kuva, ääni)",
+      "Nopea vasteaika",
+      "Laaja ekosysteemi (plugins, GPTs)",
+      "Vahva koodin generointi"
+    ],
+    "limitations": [
+      "Konteksti-ikkuna pienempi kuin Claudella (128k)",
+      "Hinnoittelu voi nousta yllättäen"
+    ],
+    "contextWindow": "128 000 tokenia",
+    "pricing": {
+      "subscription": [
+        { "tier": "ChatGPT Plus", "price": "$20/kk" },
+        { "tier": "ChatGPT Pro", "price": "$200/kk" }
+      ],
+      "api": { "input": "$2.50/Mtok", "output": "$10/Mtok" }
+    },
+    "bestFor": [
+      "Kuva-analyysi ja multimodaaliset tehtävät",
+      "Nopea prototyyppaus",
+      "ChatGPT-pohjainen työnkulku"
+    ],
+    "links": {
+      "docs": "https://platform.openai.com/docs",
+      "pricing": "https://openai.com/pricing",
+      "home": "https://chatgpt.com"
+    },
+    "lastUpdated": "2026-05-22",
+    "source": "https://openai.com/chatgpt",
+    "confidence": "verified"
+  },
+  {
+    "id": "gemini-2-5-pro",
+    "name": "Gemini 2.5 Pro",
+    "vendor": "Google",
+    "latestVersion": "gemini-2.5-pro",
+    "releaseDate": "2025-03",
+    "category": "yleismalli",
+    "phases": ["suunnittelu", "toteutus", "testaus"],
+    "strengths": [
+      "Erittäin pitkä konteksti-ikkuna (1M tokenia)",
+      "Natiivi Google-integraatio (Docs, Drive, Gmail)",
+      "Vahva koodin generointi ja selitys"
+    ],
+    "limitations": [
+      "Google-ekosysteemiin sidonnainen parhaat ominaisuudet",
+      "Yksityisyyshuolet Google-palveluissa"
+    ],
+    "contextWindow": "1 000 000 tokenia",
+    "pricing": {
+      "subscription": [
+        { "tier": "Google One AI Premium", "price": "$19.99/kk" }
+      ],
+      "api": { "input": "$1.25/Mtok (alle 200k)", "output": "$10/Mtok" }
+    },
+    "bestFor": [
+      "Suurten koodipohjien analyysi",
+      "Google Workspace -integraatiot",
+      "Dokumenttien käsittely"
+    ],
+    "links": {
+      "docs": "https://ai.google.dev",
+      "pricing": "https://ai.google.dev/gemini-api/docs/pricing",
+      "home": "https://gemini.google.com"
+    },
+    "lastUpdated": "2026-05-22",
+    "source": "https://deepmind.google/technologies/gemini/",
+    "confidence": "estimated"
+  },
+  {
+    "id": "llama-3-3-70b",
+    "name": "Llama 3.3 70B",
+    "vendor": "Meta (avoin)",
+    "latestVersion": "llama-3.3-70b-instruct",
+    "releaseDate": "2024-12",
+    "category": "paikallinen",
+    "phases": ["toteutus", "testaus"],
+    "strengths": [
+      "Täysin ilmainen ja avoin lähdekoodi",
+      "Toimii paikallisesti — ei datavuotoja",
+      "Hyvä suorituskyky suhteessa kokoon"
+    ],
+    "limitations": [
+      "Vaatii tehokkaan GPU:n paikalliseen ajoon",
+      "Ei päällä pitäminen vie resursseja"
+    ],
+    "contextWindow": "128 000 tokenia",
+    "pricing": {
+      "subscription": [{ "tier": "Ilmainen", "price": "0 €" }],
+      "notes": "Infrakulut omalle laitteistolla"
+    },
+    "bestFor": [
+      "Yksityisyyttä vaativat tehtävät",
+      "Offline-käyttö",
+      "Kustannustehokas massagenerointi"
+    ],
+    "links": {
+      "docs": "https://ollama.com/library/llama3.3",
+      "home": "https://llama.meta.com"
+    },
+    "lastUpdated": "2026-05-22",
+    "source": "https://llama.meta.com",
+    "confidence": "verified"
+  },
+  {
+    "id": "mistral-small",
+    "name": "Mistral Small 3.1",
+    "vendor": "Mistral AI",
+    "latestVersion": "mistral-small-2503",
+    "releaseDate": "2025-03",
+    "category": "edullinen",
+    "phases": ["toteutus", "testaus", "seuranta"],
+    "strengths": [
+      "Erittäin edullinen API-hinta",
+      "Nopea vasteaika",
+      "Riittävä laatu yksinkertaisiin tehtäviin",
+      "EU-pohjainen (GDPR-ystävällinen)"
+    ],
+    "limitations": [
+      "Heikompi monimutkaisissa päättelytehtävissä",
+      "Pienempi ekosysteemi"
+    ],
+    "contextWindow": "128 000 tokenia",
+    "pricing": {
+      "subscription": [{ "tier": "Ilmainen (rajoitettu)", "price": "0 €" }],
+      "api": { "input": "$0.10/Mtok", "output": "$0.30/Mtok" }
+    },
+    "bestFor": [
+      "Automaattiset taustaitehtävät",
+      "Yksinkertaisten tekstien generointi",
+      "Kustannuskriittiset API-integraatiot"
+    ],
+    "links": {
+      "docs": "https://docs.mistral.ai",
+      "pricing": "https://mistral.ai/technology/pricing",
+      "home": "https://mistral.ai"
+    },
+    "lastUpdated": "2026-05-22",
+    "source": "https://mistral.ai",
+    "confidence": "estimated"
+  }
+]
