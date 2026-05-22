@@ -263,6 +263,160 @@
     "confidence": "verified"
   },
   {
+    "id": "figma",
+    "name": "Figma",
+    "vendor": "Figma / Adobe",
+    "type": "UI/UX-suunnittelu",
+    "purpose": "Selainpohjainen vektorisuunnittelu- ja prototyyppaustyökalu — wireframet, mockupit ja interaktiiviset prototyypit",
+    "phases": ["suunnittelu"],
+    "integrations": ["GitHub", "VS Code"],
+    "worksWith": [],
+    "strengths": [
+      "Reaaliaikainen yhteistyö — useita suunnittelijoita samassa tiedostossa",
+      "Dev Mode: kehittäjät näkevät mitat, värit ja assetit suoraan",
+      "Laaja plugin-ekosysteemi, myös AI-lisäosat"
+    ],
+    "limitations": [
+      "Ilmaistaso rajoitettu (3 projektia)",
+      "Vaatii opettelua — ei yhtä nopea kuin pen & paper"
+    ],
+    "pricing": {
+      "subscription": [
+        { "tier": "Free", "price": "0 €" },
+        { "tier": "Professional", "price": "$15/kk/käyttäjä" },
+        { "tier": "Organization", "price": "$45/kk/käyttäjä" }
+      ]
+    },
+    "bestFor": [
+      "UI-wireframet ja mockupit ennen koodausta",
+      "Interaktiiviset prototyypit käyttäjätestaukseen",
+      "Design systemin hallinta tiimeille"
+    ],
+    "links": {
+      "docs": "https://help.figma.com",
+      "pricing": "https://figma.com/pricing",
+      "home": "https://figma.com"
+    },
+    "lastUpdated": "2026-05-22",
+    "source": "https://figma.com",
+    "confidence": "verified"
+  },
+  {
+    "id": "railway",
+    "name": "Railway",
+    "vendor": "Railway Corp",
+    "type": "hosting / deploy",
+    "purpose": "Pilvipalvelu sovellusten, tietokantojen ja palveluiden deployaukseen ja hostingiin — git push käynnistää deployn automaattisesti",
+    "phases": ["julkaisu", "seuranta"],
+    "integrations": ["GitHub", "GitHub Actions", "Docker"],
+    "worksWith": [],
+    "strengths": [
+      "Tukee backend-sovelluksia ja tietokantoja (toisin kuin Vercel)",
+      "Automaattinen deploy GitHub-pushista",
+      "Sisäänrakennetut lokit ja metriikat"
+    ],
+    "limitations": [
+      "Ilmaistaso rajoitettu ($5/kk krediittejä)",
+      "Ei yhtä laaja ekosysteemi kuin AWS tai GCP"
+    ],
+    "pricing": {
+      "subscription": [
+        { "tier": "Hobby", "price": "$5/kk (+ käyttö)" },
+        { "tier": "Pro", "price": "$20/kk/käyttäjä (+ käyttö)" }
+      ]
+    },
+    "bestFor": [
+      "Full-stack-sovellusten nopea deploy",
+      "Tietokannat (PostgreSQL, Redis) pilveen",
+      "Backend-palvelut ilman infrastruktuuriosaamista"
+    ],
+    "links": {
+      "docs": "https://docs.railway.app",
+      "pricing": "https://railway.app/pricing",
+      "home": "https://railway.app"
+    },
+    "lastUpdated": "2026-05-22",
+    "source": "https://railway.app",
+    "confidence": "verified"
+  },
+  {
+    "id": "netlify",
+    "name": "Netlify",
+    "vendor": "Netlify",
+    "type": "hosting / deploy",
+    "purpose": "Frontend-sovellusten hosting ja automaattinen CI/CD — git push deployaa, ja jokainen PR saa oman preview-linkin",
+    "phases": ["julkaisu", "seuranta"],
+    "integrations": ["GitHub", "GitHub Actions", "Next.js", "Vite"],
+    "worksWith": [],
+    "strengths": [
+      "Ilmaistaso riittää moniin projekteihin",
+      "Preview-URL jokaiselle PR:lle automaattisesti",
+      "Serverless Functions ja Edge Functions"
+    ],
+    "limitations": [
+      "Build-minuutit rajoitettu ilmaistasolla",
+      "Suurissa projekteissa kalliimpi kuin Vercel"
+    ],
+    "pricing": {
+      "subscription": [
+        { "tier": "Free", "price": "0 €" },
+        { "tier": "Pro", "price": "$19/kk" }
+      ]
+    },
+    "bestFor": [
+      "Staattisten sivustojen ja SPA-sovellusten hosting",
+      "JAMstack-arkkitehtuurin deploy",
+      "Nopea prototyyppien julkaisu"
+    ],
+    "links": {
+      "docs": "https://docs.netlify.com",
+      "pricing": "https://netlify.com/pricing",
+      "home": "https://netlify.com"
+    },
+    "lastUpdated": "2026-05-22",
+    "source": "https://netlify.com",
+    "confidence": "verified"
+  },
+  {
+    "id": "cloudflare",
+    "name": "Cloudflare",
+    "vendor": "Cloudflare",
+    "type": "CDN / hosting",
+    "purpose": "Globaali CDN, DNS-hallinta, DDoS-suojaus ja Cloudflare Pages -hosting staattisille sovelluksille",
+    "phases": ["julkaisu", "seuranta"],
+    "integrations": ["GitHub", "GitHub Actions"],
+    "worksWith": [],
+    "strengths": [
+      "Laaja ilmaistaso CDN:lle ja DNS:lle",
+      "Pages: ilmainen hosting staattisille sivuille git-pohjaisella deploylla",
+      "Workers: reunalaskenta ilman palvelimia",
+      "Analytics ja DDoS-suojaus sisäänrakennettu"
+    ],
+    "limitations": [
+      "Konfiguraatio voi olla monimutkaista aloittelijoille",
+      "Workers-ympäristö poikkeaa Node.js:stä"
+    ],
+    "pricing": {
+      "subscription": [
+        { "tier": "Free", "price": "0 €" },
+        { "tier": "Pro", "price": "$20/kk" }
+      ]
+    },
+    "bestFor": [
+      "DNS-hallinta ja CDN kaikille projekteille",
+      "Staattisten sivujen hosting (Pages)",
+      "DDoS-suojaus ja tietoturva tuotantosovelluksille"
+    ],
+    "links": {
+      "docs": "https://developers.cloudflare.com",
+      "pricing": "https://cloudflare.com/plans",
+      "home": "https://cloudflare.com"
+    },
+    "lastUpdated": "2026-05-22",
+    "source": "https://cloudflare.com",
+    "confidence": "verified"
+  },
+  {
     "id": "perplexity",
     "name": "Perplexity AI",
     "vendor": "Perplexity AI",

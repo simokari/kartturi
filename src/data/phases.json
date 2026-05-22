@@ -2,7 +2,7 @@
   {
     "id": "suunnittelu",
     "name": "Suunnittelu",
-    "description": "Ideointi, vaatimukset, arkkitehtuuri, promptien laadinta"
+    "description": "Ideointi, vaatimukset, arkkitehtuuri, UI/UX-suunnittelu ja promptien laadinta"
   },
   {
     "id": "toteutus",
@@ -21,8 +21,8 @@
   },
   {
     "id": "julkaisu",
-    "name": "Julkaisu",
-    "description": "Deploy, CI/CD-putki, ympäristöjen hallinta"
+    "name": "Julkaisu ja hosting",
+    "description": "Deploy, CI/CD-putki, hosting-ympäristö ja ympäristöjen hallinta"
   },
   {
     "id": "seuranta",
