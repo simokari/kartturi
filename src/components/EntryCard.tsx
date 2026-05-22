@@ -2,17 +2,17 @@ import type { Model, Tool } from '../types'
 import { isTool } from '../utils/entryGuards'
 
 type Props =
-  | { kind: 'model'; entry: Model; onSelect: (entry: Model) => void; isFavorite: boolean; onToggleFavorite: (id: string) => void }
-  | { kind: 'tool'; entry: Tool; onSelect: (entry: Tool) => void; isFavorite: boolean; onToggleFavorite: (id: string) => void }
+  | { kind: 'model'; entry: Model; onSelect: (entry: Model | Tool) => void; isFavorite: boolean; onToggleFavorite: (id: string) => void }
+  | { kind: 'tool'; entry: Tool; onSelect: (entry: Model | Tool) => void; isFavorite: boolean; onToggleFavorite: (id: string) => void }
 
 export function EntryCard({ kind, entry, onSelect, isFavorite, onToggleFavorite }: Props) {
-  const tag = kind === 'model' ? entry.category : (entry as Tool).type
+  const tag = isTool(entry) ? entry.type : entry.category
   const label = `${entry.name}, ${entry.vendor}, ${tag}`
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault()
-      isTool(entry) ? onSelect(entry as Tool) : onSelect(entry as Model)
+      onSelect(entry)
     }
   }
 
@@ -27,7 +27,7 @@ export function EntryCard({ kind, entry, onSelect, isFavorite, onToggleFavorite 
       tabIndex={0}
       role="button"
       aria-label={label}
-      onClick={() => isTool(entry) ? onSelect(entry as Tool) : onSelect(entry as Model)}
+      onClick={() => onSelect(entry)}
       onKeyDown={handleKeyDown}
     >
       <div className="entry-card-top">

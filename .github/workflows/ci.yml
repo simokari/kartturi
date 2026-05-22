@@ -23,7 +23,7 @@ jobs:
         run: npm run validate
 
       - name: Type-check
-        run: npx tsc -b --noEmit
+        run: npx tsc -p tsconfig.app.json --noEmit
 
       - name: Tests
         run: npm run test:run
