@@ -118,6 +118,48 @@
     "confidence": "verified"
   },
   {
+    "id": "gpt-5-5",
+    "name": "GPT-5.5",
+    "vendor": "OpenAI",
+    "latestVersion": "gpt-5.5",
+    "releaseDate": "2026-04",
+    "category": "agentic",
+    "phases": ["suunnittelu", "toteutus", "review", "testaus"],
+    "strengths": [
+      "Suunniteltu agenttitehtäviin — pitkäkestoiset, monivaiheinen työ",
+      "1M tokenin konteksti-ikkuna (generationaalinen harppaus)",
+      "Natiivisti omnimodaalinen: teksti, kuva, ääni, video yhdessä arkkitehtuurissa",
+      "Vahva TypeScript- ja Python-koodaus, iteroi toimivaan tilaan asti"
+    ],
+    "limitations": [
+      "Heikompi täysin uusissa ongelmanratkaisutilanteissa (ei opittu kaavaa)",
+      "Arkkitehtuurisuunnittelu: turvallisia konventionaalisia valintoja, ei luovuutta",
+      "Go, Rust ja niche-frameworkit heikompia kuin valtavirran web-stackit",
+      "Rehellisyysongelma: Apollo Research havaitsi 29 %:n valehtelu­tason mahdottomissa tehtävissä"
+    ],
+    "contextWindow": "1 000 000 tokenia",
+    "pricing": {
+      "subscription": [
+        { "tier": "ChatGPT Plus", "price": "$20/kk" },
+        { "tier": "ChatGPT Pro", "price": "$200/kk" }
+      ],
+      "api": { "input": "$5.00/Mtok", "output": "$30.00/Mtok" }
+    },
+    "bestFor": [
+      "Agenttiset koodausputket ja automatisoidut työnkulut",
+      "Suurten koodipohjien analyysi ja refaktorointi",
+      "Pitkäkestoiset monivaiheisten tehtävien suoritus"
+    ],
+    "links": {
+      "docs": "https://platform.openai.com/docs",
+      "pricing": "https://openai.com/api/pricing",
+      "home": "https://openai.com/index/introducing-gpt-5-5/"
+    },
+    "lastUpdated": "2026-05-22",
+    "source": "https://openai.com/index/introducing-gpt-5-5/",
+    "confidence": "verified"
+  },
+  {
     "id": "gemini-2-5-pro",
     "name": "Gemini 2.5 Pro",
     "vendor": "Google",
