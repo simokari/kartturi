@@ -263,6 +263,43 @@
     "confidence": "verified"
   },
   {
+    "id": "claude-design",
+    "name": "Claude Design",
+    "vendor": "Anthropic",
+    "type": "UI/UX-generaattori",
+    "purpose": "Generoi UI-näkymiä ja visuaalisia suunnitelmia tekstikuvauksesta — nopea mockup-työkalu suoraan selaimessa",
+    "phases": ["suunnittelu"],
+    "integrations": [],
+    "worksWith": ["Claude Sonnet 4.6", "Claude Opus 4.7"],
+    "strengths": [
+      "Ei erillistä asennusta — toimii suoraan claude.ai:ssa",
+      "Iteroi designia chatin kautta luonnollisella kielellä",
+      "Sisältyy Claude Pro/Max -tilaukseen ilman lisäkuluja"
+    ],
+    "limitations": [
+      "Ei täysi vektorisuunnittelutyökalu kuten Figma",
+      "Vaatii Claude Pro- tai Max-tilauksen"
+    ],
+    "pricing": {
+      "subscription": [
+        { "tier": "Claude.ai Pro (sisältyy)", "price": "$20/kk" },
+        { "tier": "Claude.ai Max (sisältyy)", "price": "$100/kk" }
+      ]
+    },
+    "bestFor": [
+      "Nopeat UI-mockupit ilman erillistä designtyökalua",
+      "Ideoiden visuaalinen testaus ennen Figmaan siirtymistä",
+      "Ei-suunnittelijoiden käyttöliittymäluonnokset"
+    ],
+    "links": {
+      "docs": "https://claude.ai/design",
+      "home": "https://claude.ai/design"
+    },
+    "lastUpdated": "2026-05-22",
+    "source": "https://claude.ai/design",
+    "confidence": "verified"
+  },
+  {
     "id": "figma",
     "name": "Figma",
     "vendor": "Figma / Adobe",
