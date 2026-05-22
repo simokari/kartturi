@@ -6,10 +6,10 @@ export default defineConfig({
   plugins: [react()],
   base: '/',
   test: {
-    environment: 'node',
+    environment: 'jsdom',
     coverage: {
       provider: 'v8',
-      include: ['src/utils/**'],
+      include: ['src/utils/**', 'src/hooks/**'],
       reporter: ['text', 'html'],
     },
   },
