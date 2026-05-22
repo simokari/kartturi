@@ -199,12 +199,12 @@ export function BrowseView({ onSelect, isFavorite, onToggleFavorite }: Props) {
           {tab === 'models'
             ? filteredModels.map((m) => (
                 <li key={m.id}>
-                  <EntryCard kind="model" entry={m} onSelect={onSelect} isFavorite={isFavorite(m.id)} onToggleFavorite={onToggleFavorite} />
+                  <EntryCard entry={m} onSelect={onSelect} isFavorite={isFavorite(m.id)} onToggleFavorite={onToggleFavorite} />
                 </li>
               ))
             : filteredTools.map((t) => (
                 <li key={t.id}>
-                  <EntryCard kind="tool" entry={t} onSelect={onSelect} isFavorite={isFavorite(t.id)} onToggleFavorite={onToggleFavorite} />
+                  <EntryCard entry={t} onSelect={onSelect} isFavorite={isFavorite(t.id)} onToggleFavorite={onToggleFavorite} />
                 </li>
               ))
           }

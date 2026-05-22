@@ -25,12 +25,12 @@ export function PhaseColumn({ phase, models, tools, onSelect, isFavorite, onTogg
       <ul className="phase-entries" aria-label={`${phase.name} -vaiheen merkinnät`}>
         {models.map((m) => (
           <li key={m.id}>
-            <EntryCard kind="model" entry={m} onSelect={onSelect} isFavorite={isFavorite(m.id)} onToggleFavorite={onToggleFavorite} />
+            <EntryCard entry={m} onSelect={onSelect} isFavorite={isFavorite(m.id)} onToggleFavorite={onToggleFavorite} />
           </li>
         ))}
         {tools.map((t) => (
           <li key={t.id}>
-            <EntryCard kind="tool" entry={t} onSelect={onSelect} isFavorite={isFavorite(t.id)} onToggleFavorite={onToggleFavorite} />
+            <EntryCard entry={t} onSelect={onSelect} isFavorite={isFavorite(t.id)} onToggleFavorite={onToggleFavorite} />
           </li>
         ))}
         {total === 0 && (

@@ -1,11 +1,14 @@
 import type { Model, Tool } from '../types'
 import { isTool } from '../utils/entryGuards'
 
-type Props =
-  | { kind: 'model'; entry: Model; onSelect: (entry: Model | Tool) => void; isFavorite: boolean; onToggleFavorite: (id: string) => void }
-  | { kind: 'tool'; entry: Tool; onSelect: (entry: Model | Tool) => void; isFavorite: boolean; onToggleFavorite: (id: string) => void }
+interface Props {
+  entry: Model | Tool
+  onSelect: (entry: Model | Tool) => void
+  isFavorite: boolean
+  onToggleFavorite: (id: string) => void
+}
 
-export function EntryCard({ kind, entry, onSelect, isFavorite, onToggleFavorite }: Props) {
+export function EntryCard({ entry, onSelect, isFavorite, onToggleFavorite }: Props) {
   const tag = isTool(entry) ? entry.type : entry.category
   const label = `${entry.name}, ${entry.vendor}, ${tag}`
 
