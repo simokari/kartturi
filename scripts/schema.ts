@@ -14,10 +14,15 @@ const Pricing = z.object({
   notes: z.string().optional(),
 })
 
+const httpsUrl = z.string().url().refine(
+  (url) => url.startsWith('https://'),
+  { message: 'URL täytyy alkaa https://' }
+)
+
 const Links = z.object({
-  docs: z.string().url(),
-  pricing: z.string().url().optional(),
-  home: z.string().url().optional(),
+  docs: httpsUrl,
+  pricing: httpsUrl.optional(),
+  home: httpsUrl.optional(),
 })
 
 const dateRegex = /^\d{4}-\d{2}-\d{2}$/
@@ -43,7 +48,7 @@ export const ModelSchema = z.object({
   bestFor: z.array(z.string()).min(1),
   links: Links,
   lastUpdated: z.string().regex(dateRegex, 'Muoto: YYYY-MM-DD'),
-  source: z.string().url(),
+  source: httpsUrl,
   confidence: Confidence,
 })
 
@@ -62,6 +67,6 @@ export const ToolSchema = z.object({
   bestFor: z.array(z.string()).min(1),
   links: Links,
   lastUpdated: z.string().regex(dateRegex, 'Muoto: YYYY-MM-DD'),
-  source: z.string().url(),
+  source: httpsUrl,
   confidence: Confidence,
 })
