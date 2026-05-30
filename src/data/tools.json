@@ -7,7 +7,7 @@
     "purpose": "AI-avusteinen koodaus suoraan terminaalista tai IDE:stä — lukee, muokkaa ja ajaa koodia",
     "phases": ["suunnittelu", "toteutus", "review", "testaus"],
     "integrations": ["GitHub", "VS Code", "JetBrains", "Vercel"],
-    "worksWith": ["Claude Sonnet 4.6", "Claude Opus 4.7", "Claude Haiku 4.5"],
+    "worksWith": ["Claude Sonnet 4.6", "Claude Opus 4.8", "Claude Haiku 4.5"],
     "strengths": [
       "Koko koodipohjan konteksti käytössä",
       "Ajaa komentoja, testit ja buildit suoraan",
@@ -33,7 +33,7 @@
       "docs": "https://docs.anthropic.com/claude-code",
       "home": "https://claude.ai/code"
     },
-    "lastUpdated": "2026-05-22",
+    "lastUpdated": "2026-05-30",
     "source": "https://claude.ai/code",
     "confidence": "verified"
   },
@@ -58,8 +58,8 @@
     "pricing": {
       "subscription": [
         { "tier": "Hobby (ilmainen)", "price": "0 €" },
-        { "tier": "Pro", "price": "$20/kk" },
-        { "tier": "Business", "price": "$40/kk/käyttäjä" }
+        { "tier": "Individual", "price": "$20/kk" },
+        { "tier": "Teams", "price": "$40/kk/käyttäjä" }
       ]
     },
     "bestFor": [
@@ -72,7 +72,7 @@
       "pricing": "https://cursor.com/pricing",
       "home": "https://cursor.com"
     },
-    "lastUpdated": "2026-05-22",
+    "lastUpdated": "2026-05-30",
     "source": "https://cursor.com",
     "confidence": "verified"
   },
@@ -84,11 +84,11 @@
     "purpose": "AI-koodausassistentti suoraan olemassaolevaan editoriin (VS Code, JetBrains, Vim…)",
     "phases": ["toteutus", "review", "testaus"],
     "integrations": ["GitHub", "VS Code", "JetBrains", "Vim/Neovim"],
-    "worksWith": ["GPT-4o", "Claude Sonnet 4.6", "Gemini 2.5 Pro"],
+    "worksWith": ["GPT-4o", "Claude Sonnet 4.6", "Claude Opus 4.7", "Gemini 2.5 Pro"],
     "strengths": [
       "Toimii suoraan nykyisessä editorissa",
       "Syvä GitHub-integraatio (PR-summary, issue-linkitys)",
-      "Edullinen verrattuna kilpailijoihin"
+      "Ilmainen perustaso saatavilla"
     ],
     "limitations": [
       "Konteksti rajatumpi kuin Cursorilla tai Claude Codella",
@@ -96,8 +96,9 @@
     ],
     "pricing": {
       "subscription": [
-        { "tier": "Individual", "price": "$10/kk" },
-        { "tier": "Business", "price": "$19/kk/käyttäjä" }
+        { "tier": "Free", "price": "0 € (50 pyyntöä/kk)" },
+        { "tier": "Pro", "price": "$10/kk" },
+        { "tier": "Pro+", "price": "$39/kk" }
       ],
       "notes": "Ilmainen opiskelijoille ja open source -ylläpitäjille"
     },
@@ -111,7 +112,7 @@
       "pricing": "https://github.com/features/copilot",
       "home": "https://github.com/features/copilot"
     },
-    "lastUpdated": "2026-05-22",
+    "lastUpdated": "2026-05-30",
     "source": "https://github.com/features/copilot",
     "confidence": "verified"
   },
@@ -145,7 +146,7 @@
       "docs": "https://ollama.com/docs",
       "home": "https://ollama.com"
     },
-    "lastUpdated": "2026-05-22",
+    "lastUpdated": "2026-05-30",
     "source": "https://ollama.com",
     "confidence": "verified"
   },
@@ -182,7 +183,7 @@
       "docs": "https://docs.github.com/actions",
       "home": "https://github.com/features/actions"
     },
-    "lastUpdated": "2026-05-22",
+    "lastUpdated": "2026-05-30",
     "source": "https://github.com/features/actions",
     "confidence": "verified"
   },
@@ -221,7 +222,7 @@
       "pricing": "https://vercel.com/pricing",
       "home": "https://vercel.com"
     },
-    "lastUpdated": "2026-05-22",
+    "lastUpdated": "2026-05-30",
     "source": "https://vercel.com",
     "confidence": "verified"
   },
@@ -258,7 +259,7 @@
       "docs": "https://v0.dev/docs",
       "home": "https://v0.dev"
     },
-    "lastUpdated": "2026-05-22",
+    "lastUpdated": "2026-05-30",
     "source": "https://v0.dev",
     "confidence": "verified"
   },
@@ -270,7 +271,7 @@
     "purpose": "Generoi UI-näkymiä ja visuaalisia suunnitelmia tekstikuvauksesta — nopea mockup-työkalu suoraan selaimessa",
     "phases": ["suunnittelu"],
     "integrations": [],
-    "worksWith": ["Claude Sonnet 4.6", "Claude Opus 4.7"],
+    "worksWith": ["Claude Sonnet 4.6", "Claude Opus 4.8"],
     "strengths": [
       "Ei erillistä asennusta — toimii suoraan claude.ai:ssa",
       "Iteroi designia chatin kautta luonnollisella kielellä",
@@ -295,7 +296,7 @@
       "docs": "https://claude.ai/design",
       "home": "https://claude.ai/design"
     },
-    "lastUpdated": "2026-05-22",
+    "lastUpdated": "2026-05-30",
     "source": "https://claude.ai/design",
     "confidence": "verified"
   },
@@ -320,8 +321,8 @@
     "pricing": {
       "subscription": [
         { "tier": "Free", "price": "0 €" },
-        { "tier": "Professional", "price": "$15/kk/käyttäjä" },
-        { "tier": "Organization", "price": "$45/kk/käyttäjä" }
+        { "tier": "Professional", "price": "$16/kk/käyttäjä" },
+        { "tier": "Organization", "price": "$55/kk/käyttäjä" }
       ]
     },
     "bestFor": [
@@ -334,7 +335,7 @@
       "pricing": "https://figma.com/pricing",
       "home": "https://figma.com"
     },
-    "lastUpdated": "2026-05-22",
+    "lastUpdated": "2026-05-30",
     "source": "https://figma.com",
     "confidence": "verified"
   },
@@ -372,7 +373,7 @@
       "pricing": "https://railway.app/pricing",
       "home": "https://railway.app"
     },
-    "lastUpdated": "2026-05-22",
+    "lastUpdated": "2026-05-30",
     "source": "https://railway.app",
     "confidence": "verified"
   },
@@ -397,7 +398,8 @@
     "pricing": {
       "subscription": [
         { "tier": "Free", "price": "0 €" },
-        { "tier": "Pro", "price": "$19/kk" }
+        { "tier": "Personal", "price": "$9/kk" },
+        { "tier": "Pro", "price": "$20/kk" }
       ]
     },
     "bestFor": [
@@ -410,7 +412,7 @@
       "pricing": "https://netlify.com/pricing",
       "home": "https://netlify.com"
     },
-    "lastUpdated": "2026-05-22",
+    "lastUpdated": "2026-05-30",
     "source": "https://netlify.com",
     "confidence": "verified"
   },
@@ -449,7 +451,7 @@
       "pricing": "https://cloudflare.com/plans",
       "home": "https://cloudflare.com"
     },
-    "lastUpdated": "2026-05-22",
+    "lastUpdated": "2026-05-30",
     "source": "https://cloudflare.com",
     "confidence": "verified"
   },
@@ -486,7 +488,7 @@
       "docs": "https://docs.perplexity.ai",
       "home": "https://perplexity.ai"
     },
-    "lastUpdated": "2026-05-22",
+    "lastUpdated": "2026-05-30",
     "source": "https://perplexity.ai",
     "confidence": "verified"
   }
