@@ -45,7 +45,7 @@
     "purpose": "VS Code -pohjainen IDE jossa AI-koodausassistentti suoraan editorissa",
     "phases": ["toteutus", "review"],
     "integrations": ["GitHub", "VS Code (laajennukset)"],
-    "worksWith": ["GPT-4o", "Claude Sonnet 4.6", "Gemini 2.5 Pro"],
+    "worksWith": ["GPT-4o", "Claude Sonnet 4.6", "Gemini 3.5 Flash"],
     "strengths": [
       "Tuttu VS Code -käyttöliittymä",
       "Tab-täydennys koko tiedostokontekstilla",
@@ -84,7 +84,7 @@
     "purpose": "AI-koodausassistentti suoraan olemassaolevaan editoriin (VS Code, JetBrains, Vim…)",
     "phases": ["toteutus", "review", "testaus"],
     "integrations": ["GitHub", "VS Code", "JetBrains", "Vim/Neovim"],
-    "worksWith": ["GPT-4o", "Claude Sonnet 4.6", "Claude Opus 4.7", "Gemini 2.5 Pro"],
+    "worksWith": ["GPT-4o", "Claude Sonnet 4.6", "Claude Opus 4.8", "Gemini 3.5 Flash"],
     "strengths": [
       "Toimii suoraan nykyisessä editorissa",
       "Syvä GitHub-integraatio (PR-summary, issue-linkitys)",

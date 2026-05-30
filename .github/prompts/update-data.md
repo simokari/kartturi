@@ -34,6 +34,15 @@ strengths[], limitations[], pricing{...}, bestFor[], links{docs, pricing?, home?
 lastUpdated, source, confidence`
 
 ## Hard rules (the build validates these — violating any fails CI)
+- **NEVER change an existing `id`.** Ids are permanent, version-independent keys
+  that user favourites and the compare view depend on — changing one silently
+  breaks saved data. Ids deliberately contain no version number
+  (`claude-opus`, `claude-sonnet`, `gemini`, `llama-70b`). When a model ships a
+  new version, update `name`, `latestVersion`, `releaseDate`, and the other
+  fields, but **keep the `id` untouched**. The same applies if you treat an entry
+  as "the vendor's current model" and swap which version it tracks (e.g. Gemini
+  Flash → Pro): keep the existing `id`. Only ever introduce a new `id` when you
+  are genuinely *adding a new card*, and make it version-independent.
 - `phases[]` values must be from: `suunnittelu, toteutus, review, testaus, julkaisu, seuranta`
 - `confidence` must be exactly `verified` or `estimated`:
   - `verified` — you confirmed the value from an authoritative source this run

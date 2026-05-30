@@ -1,6 +1,6 @@
 [
   {
-    "id": "claude-sonnet-4-6",
+    "id": "claude-sonnet",
     "name": "Claude Sonnet 4.6",
     "vendor": "Anthropic",
     "latestVersion": "claude-sonnet-4-6",
@@ -40,7 +40,7 @@
     "confidence": "verified"
   },
   {
-    "id": "claude-opus-4-8",
+    "id": "claude-opus",
     "name": "Claude Opus 4.8",
     "vendor": "Anthropic",
     "latestVersion": "claude-opus-4-8",
@@ -163,7 +163,7 @@
     "confidence": "verified"
   },
   {
-    "id": "gemini-3-5-flash",
+    "id": "gemini",
     "name": "Gemini 3.5 Flash",
     "vendor": "Google",
     "latestVersion": "gemini-3.5-flash",
@@ -202,7 +202,7 @@
     "confidence": "verified"
   },
   {
-    "id": "llama-3-3-70b",
+    "id": "llama-70b",
     "name": "Llama 3.3 70B",
     "vendor": "Meta (avoin)",
     "latestVersion": "llama-3.3-70b-instruct",
