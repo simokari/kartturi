@@ -1,0 +1,59 @@
+name: Update AI landscape data
+
+on:
+  schedule:
+    - cron: '0 5 * * 1'  # Every Monday 05:00 UTC (08:00 Helsinki) — runs before Tuesday's freshness check
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Refresh data with Claude
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          TODAY=$(date +%Y-%m-%d)
+          PROMPT="Today's date is ${TODAY}. Use it as 'today' for any lastUpdated you set.
+
+          $(cat .github/prompts/update-data.md)"
+          claude -p "$PROMPT" \
+            --model claude-sonnet-4-6 \
+            --permission-mode acceptEdits \
+            --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(npm run validate)" \
+            --max-turns 60
+
+      - name: Validate data
+        run: npm run validate
+
+      - name: Commit and push if data changed
+        run: |
+          git config user.name "kartturi-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if [[ -n "$(git status --porcelain src/data)" ]]; then
+            git add src/data
+            git commit -m "chore: update AI landscape data $(date +%Y-%m-%d)"
+            git push
+            echo "Data updated and pushed."
+          else
+            echo "No data changes this run."
+          fi
